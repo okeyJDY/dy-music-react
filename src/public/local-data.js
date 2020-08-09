@@ -1,3 +1,4 @@
+// app-header 头部导航
 export const headerLinks = [
   {
     title: "发现音乐",
@@ -25,6 +26,7 @@ export const headerLinks = [
   }
 ]
 
+// app-footer 左边文字以及链接
 export const footerLinks = [
   {
     title: "服务条款",
@@ -48,7 +50,7 @@ export const footerLinks = [
   },
 ]
 
-
+// app-footer 右边的图片
 export const footerImages = [
   {
     link: "https://web-amped.music.163.com/"
@@ -65,4 +67,32 @@ export const footerImages = [
   {
     link: "https://music.163.com/uservideo#/plan"
   }
+]
+
+// discover 头部导航
+export const discoverMenu = [
+  {
+    title: "推荐",
+    link: "/discover/recommend"
+  },
+  {
+    title: "排行榜",
+    link: "/discover/ranking"
+  },
+  {
+    title: "歌单",
+    link: "/discover/songs"
+  },
+  {
+    title: "主播电台",
+    link: "/discover/djradio"
+  },
+  {
+    title: "歌手",
+    link: "/discover/artist"
+  },
+  {
+    title: "新碟上架",
+    link: "/discover/album"
+  },
 ]

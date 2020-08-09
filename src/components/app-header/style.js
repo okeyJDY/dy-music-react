@@ -59,11 +59,11 @@ export const HeaderLeft = styled.div`
       }
 
       .active .icon {
-        width: 12px;
-        height: 6px;
         position: absolute;
-        bottom: 0;
+        top: 64px;
         left: 50%;
+        width: 12px;
+        height: 7px;
         transform: translateX(-50%);
         background-position: -226px 0;
       }
