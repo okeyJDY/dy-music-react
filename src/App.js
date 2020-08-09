@@ -1,18 +1,14 @@
 import React, { memo } from 'react';
-import { HashRouter } from "react-router-dom";
-import { renderRoutes } from "react-router-config";
+import { Provider } from "react-redux";
 
-import routes from '@/routers';
+import store from "@/redux";
 
-import DYAppHeader from "@/components/app-header";
-import DYAppFooter from "@/components/app-footer";
+import DYPagesMain from "@/pages/main/";
 
 export default memo(function App() {
   return (
-    <HashRouter>
-      <DYAppHeader />
-      {renderRoutes(routes)}
-      <DYAppFooter />
-    </HashRouter>
+    <Provider store={store}>
+      <DYPagesMain />
+    </Provider>
   )
 })
