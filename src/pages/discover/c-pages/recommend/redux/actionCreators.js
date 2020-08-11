@@ -11,7 +11,9 @@ const changeTopBanners = (res) => ({
 export const getTopBannersAction = () => {
   return dispatch => {
     getTopBanners().then(res => {
-      dispatch(changeTopBanners(res));
+      if (res.code === 200) {
+        dispatch(changeTopBanners(res));
+      }
     })
   }
 }

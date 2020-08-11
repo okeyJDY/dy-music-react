@@ -23,7 +23,7 @@ export default memo(function DYAppHeader() {
         </NavLink>
       )
     } else {
-      return <a href={item.link}>{item.title}</a>
+      return <a href={item.link} target="_brank">{item.title}</a>
     }
   }
 

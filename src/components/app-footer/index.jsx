@@ -36,7 +36,7 @@ export default memo(function DYAppFooter() {
             <span>违法和不良信息举报电话：0571-89853516</span>
             <span>
               举报邮箱：
-              <a href="mailto:ncm5990@163.com" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:ncm5990@163.com" rel="noopener noreferrer" target="_blank">
                 ncm5990@163.com
               </a>
             </span>
