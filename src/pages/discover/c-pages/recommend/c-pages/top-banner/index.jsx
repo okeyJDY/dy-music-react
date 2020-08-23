@@ -3,7 +3,7 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
 import { Carousel } from "antd";
 
-import { getTopBannersAction } from "../../redux/actionCreators";
+import { getTopBannerAction } from "../../redux/actionCreators";
 
 import {
   TopBannerWrapper,
@@ -25,7 +25,7 @@ export default memo(function DYTopBanner() {
   // other hooks
   const topBannerRef = useRef();
   useEffect(() => {
-    dispatch(getTopBannersAction());
+    dispatch(getTopBannerAction());
   }, [dispatch]);
 
   const beforeChange = useCallback((from, to) => {
