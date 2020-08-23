@@ -2,7 +2,7 @@ import * as actionType from "./constants";
 import { getTopBanners } from "@/services/recommend";
 
 // action
-const changeTopBanners = (res) => ({
+const changeTopBannersAction = (res) => ({
   type: actionType.CHANGE_TOP_BANNERS,
   topBanners: res.banners
 })
@@ -12,7 +12,7 @@ export const getTopBannersAction = () => {
   return dispatch => {
     getTopBanners().then(res => {
       if (res.code === 200) {
-        dispatch(changeTopBanners(res));
+        dispatch(changeTopBannersAction(res));
       }
     })
   }

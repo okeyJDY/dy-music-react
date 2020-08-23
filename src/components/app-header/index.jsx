@@ -33,18 +33,23 @@ export default memo(function DYAppHeader() {
         <HeaderLeft>
           <a href="#/" className="logo sprite_01">网易云音乐</a>
           <div className="select-list">
-            {headerLinks.map((item, index) => {
-              return (
-                <div key={item.title} className="select-item">
-                  {showSelectItem(item, index)}
-                </div>
-              )
-            })}
+            {
+              headerLinks.map((item, index) => {
+                return (
+                  <div key={item.title} className="select-item">
+                    {showSelectItem(item, index)}
+                  </div>
+                )
+              })
+            }
           </div>
         </HeaderLeft>
 
         <HeaderRight>
-          <Input className="search" placeholder="音乐/视频/电台/用户" size="middle" prefix={<SearchOutlined />} />
+          <Input className="search"
+                 size="middle"
+                 placeholder="音乐/视频/电台/用户"
+                 prefix={<SearchOutlined />} />
           <div className="center">创作者中心</div>
           <div className="login">登录</div>
         </HeaderRight>

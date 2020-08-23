@@ -14,14 +14,16 @@ export default memo(function DYAppFooter() {
       <div className="content wrap-v2">
         <FooterLeft>
           <div className="link">
-            {footerLinks.map((item, index) => {
-              return (
-                <Fragment key={item.title}>
-                  <a href={item.link}>{item.title}</a>
-                  <span className="line">|</span>
-                </Fragment>
-              )
-            })}
+            {
+              footerLinks.map((item, index) => {
+                return (
+                  <Fragment key={item.title}>
+                    <a href={item.link}>{item.title}</a>
+                    <span className="line">|</span>
+                  </Fragment>
+                )
+              })
+            }
           </div>
           <div className="copyright">
             <span>网易公司版权所有©1997-2020</span>
@@ -57,14 +59,16 @@ export default memo(function DYAppFooter() {
           </div>
         </FooterLeft>
         <FooterRight>
-          {footerImages.map((item, index) => {
-            return (
-              <li className="item" key={item.link}>
-                <a className="link" href={item.link} rel="noopener noreferrer" target="_blank"> </a>
-                <span className="title">{item.title}</span>
-              </li>
-            )
-          })}
+          {
+            footerImages.map((item, index) => {
+              return (
+                <li className="item" key={item.link}>
+                  <a className="link" href={item.link} rel="noopener noreferrer" target="_blank"> </a>
+                  <span className="title">{item.title}</span>
+                </li>
+              )
+            })
+          }
         </FooterRight>
       </div>
     </FooterWrapper>

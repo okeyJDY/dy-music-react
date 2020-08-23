@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DiscoverTopMenuWrapper = styled.div`
+export const TopMenuWrapper = styled.div`
   width: 100%;
   height: 30px;
   background-color: #c20c0c
