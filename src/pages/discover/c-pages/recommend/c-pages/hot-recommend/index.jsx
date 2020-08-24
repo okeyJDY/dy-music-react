@@ -1,10 +1,12 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 
 import { getHotRecommendAction } from '../../redux/actionCreators';
 
 import DYThemeHeaderRCM from '@/components/theme-header-rcm';
-import { useEffect } from 'react';
+import DYSongCover from '@/components/songs-cover';
+
+import { HotRecommendWrapper } from './style';
 
 export default memo(function DYHotRecommend() {
 
@@ -20,9 +22,15 @@ export default memo(function DYHotRecommend() {
   }, [dispatch]);
 
   return (
-    <div>
+    <HotRecommendWrapper>
       <DYThemeHeaderRCM title="热门推荐" keywords={["华语", "流行", "民谣", "摇滚", "电子"]} />
-      <h2>{hotRecommends[0] && hotRecommends[0].name}</h2>
-    </div>
+      <div className="recommend-list">
+        {
+          hotRecommends.map((item, index) => {
+            return <DYSongCover key={item.id} info={item} />
+          })
+        }
+      </div>
+    </HotRecommendWrapper>
   )
 })
