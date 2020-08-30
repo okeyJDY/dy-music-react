@@ -21,7 +21,7 @@ export const AlbumCoverWrapper = styled.div`
       top: 0;
       bottom: 0;
       background-position: 0 ${props => props.bgp + "px"};
-      text-indent: -9999;
+      text-indent: -9999px;
 
       &:hover .play {
         background-position: 0 -85px;

@@ -71,6 +71,7 @@ export const TopBannerRight = styled.a.attrs({
     text-decoration: none;
   }
 
+
   p {
     position: absolute;
     bottom: 5px;

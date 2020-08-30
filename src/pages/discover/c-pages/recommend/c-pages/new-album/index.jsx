@@ -11,9 +11,6 @@ import DYAlbumCover from '@/components/album-cover';
 import { NewAlbumWrapper } from './style';
 
 export default memo(function DYNewAlbum() {
-
-  // props and state
-
   // redux hooks
   const dispatch = useDispatch();
   const { newAlbums } = useSelector(state => ({
@@ -25,10 +22,6 @@ export default memo(function DYNewAlbum() {
   useEffect(() => {
     dispatch(getNewAblumAction());
   }, [dispatch]);
-
-  // other handle
-
-  // function handle
 
   return (
     <NewAlbumWrapper>

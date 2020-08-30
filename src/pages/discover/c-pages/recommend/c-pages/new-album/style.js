@@ -13,23 +13,24 @@ export const NewAlbumWrapper = styled.div`
     background-color: #f5f5f5;
 
     .arrow {
-      width: 25px;
-      height: 25px;
-      margin-top: -20px;
+      width: 22px;
+      height: 22px;
+      padding: 0;
       cursor: pointer;
+      transform: translateY(-50%);
     }
 
     .arrow-left {
-      background-position: -260px -75px;
+      background-position: -260px -73px;
     }
 
     .arrow-right {
-      background-position: -300px -75px;
+      background-position: -300px -73px;
     }
 
     .album {
       flex: 1;
-      width: 0;
+      width: 644px;
       height: 150px;
 
       .ant-carousel .slick-slide {

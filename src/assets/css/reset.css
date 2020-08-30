@@ -72,6 +72,10 @@ body, textarea, select, input, button {
   background: url(../img/sprite_02.png) no-repeat 0 9999px;
 }
 
+.sprite_icon2 {
+  background: url(../img/sprite_icon2.png) no-repeat 0 9999px;
+}
+
 .sprite_footer_01 {
   background: url(../img/sprite_footer_01.png) no-repeat 0 9999px;
 }
@@ -84,10 +88,6 @@ body, textarea, select, input, button {
   background: url(../img/sprite_cover.png) no-repeat 0 9999px;
 }
 
-.sprite_icon {
-  background: url(../img/sprite_icon.png) no-repeat 0 9999px;
-}
-
 .image_cover {
   position: absolute;
   left: 0;
@@ -96,4 +96,13 @@ body, textarea, select, input, button {
   bottom: 0;
   text-indent: -9999px;
   background: url(../img/sprite_cover.png) no-repeat -145px -57px;
+}
+
+.sprite_icon {
+  background: url(../img/sprite_icon.png) no-repeat 0 9999px;
+}
+
+
+.download {
+  background: url(../img/download.png) no-repeat 0 9999px;
 }
