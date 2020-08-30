@@ -5,6 +5,7 @@ import { getCount, getSizeImage } from '@/utils/format-utils';
 import { SongCoverWrapper } from './style';
 
 export default memo(function DYSongCover(props) {
+  // props and state
   const { info } = props;
 
   return (

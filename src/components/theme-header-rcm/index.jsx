@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { HeaderWrapper, } from './style';
 
 const DYThemeHeaderRCM = memo((props) => {
+  // props and state
   const { title, keywords } = props;
 
   return (

@@ -4,7 +4,7 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { getHotRecommendAction } from '../../redux/actionCreators';
 
 import DYThemeHeaderRCM from '@/components/theme-header-rcm';
-import DYSongCover from '@/components/songs-cover';
+import DYSongCover from '@/components/song-cover';
 
 import { HotRecommendWrapper } from './style';
 

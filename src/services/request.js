@@ -20,7 +20,9 @@ instance.interceptors.request.use(config => {
 });
 
 instance.interceptors.response.use(res => {
-  return res.data;
+  if (res.status === 200) {
+    return res.data;
+  }
 }, err => {
   if (err && err.response) {
     switch (err.response.status) {

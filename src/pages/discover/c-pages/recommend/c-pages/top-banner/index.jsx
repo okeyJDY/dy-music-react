@@ -13,7 +13,7 @@ import {
 } from "./style";
 
 export default memo(function DYTopBanner() {
-  
+  // props and state
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // redux hooks
@@ -32,8 +32,9 @@ export default memo(function DYTopBanner() {
     setCurrentIndex(to);
   }, []);
 
-  // 其他业务逻辑
-  const bgImage = topBanners[currentIndex] && topBanners[currentIndex].imageUrl + "?imageView&blur=40x20"
+  // other handle
+  const bgImage = topBanners[currentIndex] &&
+                  topBanners[currentIndex].imageUrl + "?imageView&blur=40x20"
 
   return (
     <TopBannerWrapper bgImage={bgImage}>

@@ -1,35 +1,51 @@
 import * as actionType from "./constants";
 import {
   getTopBanners,
-  getHotRecommends
+  getHotRecommends,
+  getNewAlbums
 } from "@/services/recommend";
 
-// action
-const changeTopBannerAction = (res) => ({
+// change-action
+const changeTopBannerAction = topBanners => ({
   type: actionType.CHANGE_TOP_BANNERS,
-  topBanners: res.banners
+  topBanners
 })
 
-const changeHotRecommendAction = res => ({
+const changeHotRecommendAction = hotRecommends => ({
   type: actionType.CHANGE_HOT_RECOMMENDS,
-  hotRecommends: res.result
+  hotRecommends
 })
 
-// react-thunk-action
+const changeNewAblumAction = newAlbums => ({
+  type: actionType.CHANGE_NEW_ALBUMS,
+  newAlbums
+})
+
+/**
+ * react-thunk-action
+ */
+// topBannerAction
 export const getTopBannerAction = () => {
   return dispatch => {
     getTopBanners().then(res => {
-      if (res.code === 200) {
-        dispatch(changeTopBannerAction(res));
-      }
+      dispatch(changeTopBannerAction(res.banners));
+    })
+  }
+}
+// hotRecommendAction
+export const getHotRecommendAction = limit => {
+  return dispatch => {
+    getHotRecommends(limit).then(res => {
+      dispatch(changeHotRecommendAction(res.result));
+    })
+  }
+}
+// newAblumAction
+export const getNewAblumAction = limit => {
+  return dispatch => {
+    getNewAlbums(limit).then(res => {
+      dispatch(changeNewAblumAction(res.albums));
     })
   }
 }
 
-export const getHotRecommendAction = limit => {
-  return dispatch => {
-    getHotRecommends(limit).then(res => {
-      dispatch(changeHotRecommendAction(res));
-    })
-  }
-}

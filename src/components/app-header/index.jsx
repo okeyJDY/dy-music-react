@@ -13,7 +13,7 @@ import {
 
 export default memo(function DYAppHeader() {
 
-  // 页面代码
+  // function handle
   const showSelectItem = (item, index) => {
     if (index < 3) {
       return (

@@ -5,9 +5,19 @@ export const SongCoverWrapper = styled.div`
   margin: 20px 0;
 
   .cover-top {
+    position: relative;
+
     .cover {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-position: 0 0;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       .info {
         display: flex;
@@ -50,6 +60,11 @@ export const SongCoverWrapper = styled.div`
     font-size: 14px;
     color: #000;
     margin-top: 5px;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
   .cover-source {
