@@ -56,7 +56,8 @@ export default memo(function DYTopBanner() {
             }
           </Carousel>
         </TopBannerLeft>
-        <TopBannerRight>
+        <TopBannerRight className="download_bg">
+          <div className="download-btn download_bg"></div>
           <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
         </TopBannerRight>
         <TopBannerControl>

@@ -10,7 +10,6 @@ export const TopBannerWrapper = styled.div`
   }
 `
 export const TopBannerLeft = styled.div`
-  background-color: pink;
   width: 730px;
 
   .dots {
@@ -51,7 +50,7 @@ export const TopBannerLeft = styled.div`
     overflow: hidden;
 
     .image {
-      width: 100%;
+      width: 730px;
       height: 285px;
     }
   }
@@ -62,19 +61,25 @@ export const TopBannerRight = styled.a.attrs({
   target: "_brank"
 })`
   position: relative;
+  top: 0;
+  right: 0;
   width: 254px;
   height: 285px;
-  background-image: url(${require("@/assets/img/download.png")});
+  background-position: 0 0;
 
-  &:hover {
-    /* background-position: 0 -290px; */
-    text-decoration: none;
+  .download-btn {
+    width: 215px;
+    height: 56px;
+    margin: 186px 0 0 19.2px;
+    
+    &:hover {
+      background-position: 0 -290px;
+    }
   }
-
 
   p {
     position: absolute;
-    bottom: 5px;
+    bottom: 16px;
     left: 14px;
     color: #8d8d8d;
   }

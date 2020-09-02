@@ -50,7 +50,7 @@ const DYTopRanking = memo(props => {
         }
       </TopRankingList>
       <TopRankingFooter>
-        <a href="/todo">查看全部 ></a>
+        <a href="/todo">查看全部 &gt;</a>
       </TopRankingFooter>
     </TopRankingWrapper>
   )
