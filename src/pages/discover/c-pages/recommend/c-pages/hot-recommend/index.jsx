@@ -10,7 +10,7 @@ import { HotRecommendWrapper } from './style';
 
 export default memo(function DYHotRecommend() {
 
-  // redux hook
+  // redux hooks
   const dispatch = useDispatch();
   const { hotRecommends } = useSelector(state => ({
     hotRecommends: state.getIn(["recommend", "hotRecommends"])

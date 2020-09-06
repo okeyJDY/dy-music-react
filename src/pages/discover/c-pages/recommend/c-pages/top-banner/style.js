@@ -61,8 +61,6 @@ export const TopBannerRight = styled.a.attrs({
   target: "_brank"
 })`
   position: relative;
-  top: 0;
-  right: 0;
   width: 254px;
   height: 285px;
   background-position: 0 0;

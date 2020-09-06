@@ -1,9 +1,9 @@
 import React, { memo, useState, useEffect, useRef, useCallback } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
-import { Carousel } from "antd";
-
 import { getTopBannerAction } from "../../redux/actionCreators";
+
+import { Carousel } from "antd";
 
 import {
   TopBannerWrapper,
