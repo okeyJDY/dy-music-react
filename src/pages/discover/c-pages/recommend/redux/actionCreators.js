@@ -3,7 +3,8 @@ import {
   getTopBanners,
   getHotRecommends,
   getNewAlbums,
-  getTopList
+  getTopList,
+  getArtistList
 } from "@/services/recommend";
 
 // change-action
@@ -35,6 +36,11 @@ const changeNewRanking = newRanking => ({
 const changeOriginRanking = originRanking => ({
   type: actionType.CHANGE_ORIGIN_RANKING,
   originRanking
+})
+
+const changeSettleSingerAction = settleSingers => ({
+  type: actionType.CHANGE_SETTLE_SINGERS,
+  settleSingers
 })
 
 /**
@@ -80,6 +86,14 @@ export const getTopListAction = idx => {
           break;
         default:
       }
+    })
+  }
+}
+// settleSingerAction
+export const getSettleSingerAction = (limit) => {
+  return dispatch => {
+    getArtistList(limit).then(res => {
+      dispatch(changeSettleSingerAction(res.artists));
     })
   }
 }

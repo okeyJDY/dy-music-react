@@ -7,3 +7,5 @@ export const getHotRecommends = limit => request.get("/personalized", { params: 
 export const getNewAlbums = limit => request.get("/top/album", { params: { limit } });
 
 export const getTopList = idx => request.get("/top/list", { params: { idx } });
+
+export const getArtistList = limit => request.get("/artist/list", { params: { limit } });

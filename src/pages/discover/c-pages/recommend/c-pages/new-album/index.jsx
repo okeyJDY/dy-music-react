@@ -1,7 +1,6 @@
 import React, { memo, useEffect, useRef } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
-
 import { getNewAblumAction } from '../../redux/actionCreators';
 
 import { Carousel } from 'antd';
