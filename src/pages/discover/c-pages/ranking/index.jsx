@@ -4,6 +4,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { getTopListAction } from './redux/actionCreators';
 
 import { Spin } from 'antd';
+import DYBackTop from '@/components/back-top';
 import DYTopRanking from './c-pages/top-ranking';
 import DYRankingHeader from './c-pages/ranking-header';
 import DYRankingList from './c-pages/ranking-list';
@@ -35,6 +36,7 @@ export default memo(function DYRanking() {
           <DYRankingList />
         </Spin>
       </RankingRight>
+      <DYBackTop />
     </RankingWrapper>
   )
 })

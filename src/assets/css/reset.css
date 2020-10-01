@@ -96,6 +96,10 @@ body, textarea, select, input, button {
   background: url(../img/sprite_button.png) no-repeat 0 9999px;
 }
 
+.sprite_table {
+  background: url(../img/sprite_table.png) no-repeat 0 9999px;
+}
+
 .image_cover {
   position: absolute;
   left: 0;
@@ -111,3 +115,31 @@ body, textarea, select, input, button {
   background: url(../img/download.png) no-repeat 0 9999px;
 }
 
+/* 重置antd样式 */
+/* 重置table样式 */
+.ant-table-thead > tr > th {
+  box-shadow: 0 -36px 39px -36px #ccc inset;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #666;
+}
+.ant-table-tbody > tr > td {
+  padding: 6px 10px;
+  border-bottom: 0;
+}
+.ant-table-tbody > tr > td:nth-child(1),
+.ant-table-tbody > tr > td:nth-child(2),
+.ant-table-tbody > tr > td:nth-child(3) {
+  border-right: 0 !important;
+}
+
+.ant-table-tbody > tr:nth-child(2n - 1) {
+  background-color: #f7f7f7;
+}
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background-color: inherit;
+}

@@ -24,7 +24,7 @@ export default memo(function DYTopRanking() {
 
   // other hook
   useEffect(() => {
-    const id = topList[currentIndex] && topList[currentIndex].id
+    const id = topList && topList[currentIndex] && topList[currentIndex].id
     if (!id) return;
     dispatch(getPlayListgAction(id));
   }, [dispatch, topList, currentIndex]);
