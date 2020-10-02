@@ -7,12 +7,12 @@ import { AlbumCoverWrapper } from './style';
 
 const DYAlbumCover = memo((props) => {
   // props and state
-  const { info, size = 100, width = 118, bgp = -570 } = props;
+  const { info, size = 100, width = 118, bgp = -570, playStyle } = props;
 
   return (
-    <AlbumCoverWrapper size={size} width={width} bgp={bgp}>
+    <AlbumCoverWrapper className="album-cover" size={size} width={width} bgp={bgp} playStyle={playStyle}>
       <div className="album-image">
-        <img src={getSizeImage(info.picUrl, 100)} alt="" />
+        <img src={getSizeImage(info.picUrl, size)} alt="" />
         <a href="/todp" className="cover image_cover">
           {info.name}
           <i className="play sprite_icon"></i>
@@ -27,11 +27,18 @@ const DYAlbumCover = memo((props) => {
 })
 
 DYAlbumCover.proptypes = {
-  info: PropTypes.object
+  info: PropTypes.object,
+  playStyle: PropTypes.object
 }
 
 DYAlbumCover.defaultProps = {
-  info: {}
+  info: {},
+  playStyle: {
+    bgp: -85,
+    left: 72,
+    width: 22,
+    hBgp: -110
+  }
 }
 
 export default DYAlbumCover

@@ -24,21 +24,21 @@ export const AlbumCoverWrapper = styled.div`
       text-indent: -9999px;
 
       &:hover .play {
-        background-position: 0 -85px;
+        background-position: 0 ${props => props.playStyle.bgp + "px"};
       }
     }
 
     .play {
       position: absolute;
-      left: 72px;
+      left: ${props => props.playStyle.left + "px"};
       bottom: 5px;
-      width: 22px;
-      height: 22px;
+      width: ${props => props.playStyle.width + "px"};
+      height: ${props => props.playStyle.width + "px"};
       background-position: 0 -9999px;
 
       &:hover {
         cursor: pointer;
-        background-position: 0 -110px !important;
+        background-position: 0 ${props => props.playStyle.hBgp + "px"} !important;
       }
     }
   }

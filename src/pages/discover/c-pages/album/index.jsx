@@ -1,9 +1,29 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { getHotAlbumAction, getTopAlbumAction } from './redux/actionCreators';
+
+import DYBackTop from '@/components/back-top';
+import DYHotAlbum from './c-pages/hot-album';
+import DYTopAlbum from './c-pages/top-album';
+import { AlbumWrapper } from './style';
 
 export default memo(function DYAlbum() {
+
+  // redux hook
+  const dispatch = useDispatch();
+
+  // other hook
+  useEffect(() => {
+    dispatch(getHotAlbumAction());
+    dispatch(getTopAlbumAction({}));
+  }, [dispatch]);
+  
   return (
-    <div>
-      DYAlbum
-    </div>
+    <AlbumWrapper className="wrap-v2">
+      <DYHotAlbum />
+      <DYTopAlbum />
+      <DYBackTop />
+    </AlbumWrapper>
   )
 })

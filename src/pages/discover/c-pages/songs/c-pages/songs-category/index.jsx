@@ -37,7 +37,8 @@ export default memo(function DYSongsCategory() {
   
   // jsx handle
   const categoryTitle = (
-    <TitleButton className="sprite_button2" onClick={e => selectCategory("全部")}>
+    <TitleButton className="sprite_button2"
+                 onClick={e => selectCategory("全部")}>
       全部风格
     </TitleButton>
   );
@@ -56,7 +57,8 @@ export default memo(function DYSongsCategory() {
                   item.subs.map((iten, indey) => {
                     return (
                       <div key={iten.name}>
-                        <span className={classnames("link", { "active": iten.name === currentCategory })} onClick={e => selectCategory(iten.name)}>{iten.name}</span>
+                        <span className={classnames("link", { "active": iten.name === currentCategory })}
+                              onClick={e => selectCategory(iten.name)}>{iten.name}</span>
                         <span className="divider">|</span>
                       </div>
                     )
@@ -73,11 +75,11 @@ export default memo(function DYSongsCategory() {
   return (
     <SongsCategoryWrapper>
       <Popover trigger="click" 
-                placement="bottom"
-                visible={showCategory}
-                title={categoryTitle}
-                content={categoryContent}
-                onVisibleChange={visible => setShowCategory(visible)} >
+               placement="bottom"
+               visible={showCategory}
+               title={categoryTitle}
+               content={categoryContent}
+               onVisibleChange={visible => setShowCategory(visible)} >
         <button className="select" onClick={e => setShowCategory(true)}>
           <span>选择分类</span>
           <i className="sprite_icon2"></i>

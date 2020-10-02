@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
 import { getSongsAction } from '../../redux/actionCreators';
@@ -23,11 +23,11 @@ export default memo(function DYSongsList() {
   const total = (categorySongs && categorySongs.total) || 0;
 
   // fucntion handle
-  const onPageChange = (page, pageSize) => {
+  const onPageChange = useCallback((page, pageSize) => {
     setCurrentPage(page);
     dispatch(getSongsAction(page - 1));
     window.scrollTo(0, 0);
-  }
+  }, [dispatch]);
   
   return (
     <ListWrapper>

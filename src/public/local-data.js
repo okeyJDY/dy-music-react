@@ -130,3 +130,10 @@ export const hotRadios = [
     picUrl: "http://p1.music.126.net/slpd09Tf5Ju82Mv-h8MP4w==/3440371884651965.jpg",
   }
 ]
+
+export const albumPlayStyle = {
+  left: 94,
+  width: 28,
+  bgp: -140,
+  hBgp: -170
+}
