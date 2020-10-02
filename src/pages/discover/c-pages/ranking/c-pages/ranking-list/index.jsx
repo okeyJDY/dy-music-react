@@ -17,10 +17,8 @@ import {
 export default memo(function DYRankingList() {
 
   // redux hook
-  const { playList, spinning } = useSelector(state => ({
+  const { playList } = useSelector(state => ({
     playList: state.getIn(["ranking", "playList"]),
-    spinning: state.getIn(["ranking", "spinning"]),
-
   }), shallowEqual);
 
   // other handle 

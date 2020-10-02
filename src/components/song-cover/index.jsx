@@ -9,9 +9,9 @@ export default memo(function DYSongCover(props) {
   const { info } = props;
 
   return (
-    <SongCoverWrapper>
+    <SongCoverWrapper className="song-cover">
       <div className="cover-top">
-        <img src={getSizeImage(info.picUrl, 140)} alt="" />
+        <img src={getSizeImage(info.picUrl || info.coverImgUrl, 140)} alt="" />
         <div className="cover sprite_cover">
           <div className="info sprite_cover">
             <span>
@@ -26,7 +26,7 @@ export default memo(function DYSongCover(props) {
         {info.name}
       </div>
       <div className="cover-source text-nowrap">
-        by {info.copywriter}
+        by {info.copywriter || info.creator.nickname}
       </div>
     </SongCoverWrapper>
   )

@@ -95,6 +95,9 @@ body, textarea, select, input, button {
 .sprite_button {
   background: url(../img/sprite_button.png) no-repeat 0 9999px;
 }
+.sprite_button2 {
+  background: url(../img/sprite_button2.png) no-repeat 0 9999px;
+}
 
 .sprite_table {
   background: url(../img/sprite_table.png) no-repeat 0 9999px;
@@ -142,4 +145,15 @@ body, textarea, select, input, button {
 }
 .ant-table-tbody > tr.ant-table-row:hover > td {
   background-color: inherit;
+}
+/* 重置气泡卡片样式 */
+.ant-popover-inner {
+  transform: translateX(220px);
+}
+.ant-popover-inner-content {
+  padding: 0;
+}
+/* 重置分页样式 */
+.ant-pagination.mini .ant-pagination-item {
+  line-height: 24px;
 }

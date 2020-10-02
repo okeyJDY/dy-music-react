@@ -1,6 +1,6 @@
 import React, { memo, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import { getSizeImage } from '@/utils/format-utils';
 import {
@@ -47,7 +47,7 @@ export default memo(function DYTopRanking() {
           return (
             <div key={item.id}>
               {header}
-              <div className={classNames("item", { "active": index === currentIndex })}
+              <div className={classnames("item", { "active": index === currentIndex })}
                    onClick={e => handleItemClick(index)} >
                 <img src={getSizeImage(item.coverImgUrl, 40)} alt="" />
                 <div className="info">
