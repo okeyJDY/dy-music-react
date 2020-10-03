@@ -5,9 +5,9 @@ import { getTopListAction } from './redux/actionCreators';
 
 import { Spin } from 'antd';
 import DYBackTop from '@/components/back-top';
-import DYTopRanking from './c-pages/top-ranking';
-import DYRankingHeader from './c-pages/ranking-header';
-import DYRankingList from './c-pages/ranking-list';
+import DYTopRanking from './c-cpns/top-ranking';
+import DYRankingHeader from './c-cpns/ranking-header';
+import DYRankingList from './c-cpns/ranking-list';
 import {
   RankingWrapper,
   RankingLeft,

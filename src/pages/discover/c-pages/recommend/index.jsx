@@ -1,13 +1,13 @@
 import React, { memo } from 'react';
 
 import DYBackTop from '@/components/back-top';
-import DYTopBanner from './c-pages/top-banner';
-import DYHotRecommend from './c-pages/hot-recommend';
-import DYNewAlbum from './c-pages/new-album';
-import DYRecommendRanking from './c-pages/recommend-ranking';
-import DYUserLogin from './c-pages/user-login';
-import DYSettleSinger from './c-pages/settle-singer';
-import DYHotRadio from './c-pages/hot-radio';
+import DYTopBanner from './c-cpns/top-banner';
+import DYHotRecommend from './c-cpns/hot-recommend';
+import DYNewAlbum from './c-cpns/new-album';
+import DYRecommendRanking from './c-cpns/recommend-ranking';
+import DYUserLogin from './c-cpns/user-login';
+import DYSettleSinger from './c-cpns/settle-singer';
+import DYHotRadio from './c-cpns/hot-radio';
 import {
   RecommendWrapper,
   Content,

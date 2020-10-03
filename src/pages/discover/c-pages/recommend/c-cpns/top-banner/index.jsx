@@ -4,7 +4,6 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { getTopBannerAction } from "../../redux/actionCreators";
 
 import { Carousel } from "antd";
-
 import {
   TopBannerWrapper,
   TopBannerLeft,

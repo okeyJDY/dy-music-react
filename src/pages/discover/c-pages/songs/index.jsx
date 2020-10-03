@@ -7,8 +7,8 @@ import {
 } from './redux/actionCreators';
 
 import DYBackTop from '@/components/back-top';
-import DYSongsHeader from './c-pages/songs-header';
-import DYSongsList from './c-pages/songs-list';
+import DYSongsHeader from './c-cpns/songs-header';
+import DYSongsList from './c-cpns/songs-list';
 import { SongsWrapper } from './style';
 
 export default memo(function DYSongs() {

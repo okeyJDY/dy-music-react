@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import { getHotAlbumAction, getTopAlbumAction } from './redux/actionCreators';
 
 import DYBackTop from '@/components/back-top';
-import DYHotAlbum from './c-pages/hot-album';
-import DYTopAlbum from './c-pages/top-album';
+import DYHotAlbum from './c-cpns/hot-album';
+import DYTopAlbum from './c-cpns/top-album';
 import { AlbumWrapper } from './style';
 
 export default memo(function DYAlbum() {
