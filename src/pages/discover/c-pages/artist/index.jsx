@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 import DYArtistCategory from './c-cpns/artist-categoty';
-import DYArtistList from './c-cpns/artist-list';
+import DYArtistContent from './c-cpns/artist-content';
 import {
   AristWrapper,
   AristLeft,
@@ -15,7 +15,7 @@ export default memo(function DYArist() {
         <DYArtistCategory />
       </AristLeft>
       <AristRight>
-        <DYArtistList />
+        <DYArtistContent />
       </AristRight>
     </AristWrapper>
   )

@@ -20,7 +20,6 @@ export default memo(function DYArtistCategory() {
   }), shallowEqual);
 
   // function handle
-
   const selectArtist = (area, currentType) => {
     console.log("object")
     dispatch(changeCurrentAreaAction(area));
