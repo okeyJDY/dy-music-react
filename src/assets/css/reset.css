@@ -103,6 +103,14 @@ body, textarea, select, input, button {
   background: url(../img/sprite_table.png) no-repeat 0 9999px;
 }
 
+.download_bg {
+  background: url(../img/download.png) no-repeat 0 9999px;
+}
+
+.radio_bg {
+  background: url(../img/radio_bg.png) no-repeat 0 9999px;
+}
+
 .image_cover {
   position: absolute;
   left: 0;
@@ -111,11 +119,6 @@ body, textarea, select, input, button {
   bottom: 0;
   text-indent: -9999px;
   background: url(../img/sprite_cover.png) no-repeat -145px -57px;
-}
-
-
-.download_bg {
-  background: url(../img/download.png) no-repeat 0 9999px;
 }
 
 /* 重置antd样式 */
