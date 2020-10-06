@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 
 import DYThemeHeaderNormal from '@/components/theme-header-normal';
-import DYSettleSinger from './c-cpns/settle-singer';
+import DYSettleSinger from './c-cpns/settle-artist';
 import DYAlphaList from './c-cpns/alpha-list';
 import DYArtistList from './c-cpns/artist-list';
 import { ArtistContentWrapper } from './style';

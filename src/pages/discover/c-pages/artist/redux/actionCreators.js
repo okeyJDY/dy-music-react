@@ -36,9 +36,7 @@ export const getArtistListAction = (initial) => {
 export const getTopArtistListAction = (limit) => {
   return dispatch => {
     getTopArtistList(limit).then(res => {
-
-
-      
+      dispatch(changeTopArtistsAction(res.artists));
     })
   }
 }
