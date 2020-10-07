@@ -1,1 +1,4 @@
 export const CHANGE_CATE_LIST = "djradio/CHANGE_CATE_LIST";
+export const CHANGE_PROGRAMS = "djradio/CHANGE_PROGRAMS";
+export const CHANGE_PROGRAM_TOP_LIST = "djradio/CHANGE_PROGRAM_TOP_LIST";
+export const CHANGE_RECOMMEND_TYPE = "djradio/CHANGE_RECOMMEND_TYPE";

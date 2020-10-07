@@ -1,7 +1,7 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect, useRef } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
-import { getCateListAction } from '../../redux/actionCreators';
+import { getCateListAction } from '../redux/actionCreators';
 
 import { Carousel } from 'antd';
 import {
@@ -21,6 +21,7 @@ export default memo(function DYRadioCategory() {
   }), shallowEqual);
 
   // other hook
+  const carouselRef = useRef();
   useEffect(() => {
     dispatch(getCateListAction());
   }, [dispatch]);
@@ -35,9 +36,9 @@ export default memo(function DYRadioCategory() {
 
   return (
     <RadioCategoryWrapper>
-      <div className="arrow arrow-left"></div>
+      <div className="arrow-left arrow" onClick={e => carouselRef.current.prev()}>向左</div>
       <RadioCategoryContent>
-        <Carousel>
+        <Carousel dots={{ className: "dots" }} ref={carouselRef}>
           {
             Array(page).fill(0).map((_, index) => {
               return (
@@ -58,7 +59,7 @@ export default memo(function DYRadioCategory() {
           }
         </Carousel>
       </RadioCategoryContent>
-      <div className="arrow arrow-right"></div>
+      <div className="arrow-right arrow" onClick={e => carouselRef.current.next()}>向右</div>
     </RadioCategoryWrapper>
   )
 })

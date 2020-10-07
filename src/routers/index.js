@@ -12,6 +12,9 @@ import DYDjradio from "@/pages/discover/c-pages/djradio";
 import DYArist from "@/pages/discover/c-pages/artist";
 import DYAlbum from "@/pages/discover/c-pages/album";
 
+import DYDjradioCategory from "@/pages/discover/c-pages/djradio/c-pages/djradio-category";
+import DYDjradioRanking from "@/pages/discover/c-pages/djradio/c-pages/djradio-ranking";
+
 const routes = [
   {
     path: "/",
@@ -42,6 +45,22 @@ const routes = [
       {
         path: "/discover/djradio",
         component: DYDjradio,
+        routes: [
+          {
+            path: "/discover/djradio",
+            exact: true,
+            render: () => <Redirect to="/discover/djradio/category" />
+          },
+          {
+            path: "/discover/djradio/category",
+            exact: true,
+            component: DYDjradioCategory
+          },
+          {
+            path: "/discover/djradio/category/:id",
+            component: DYDjradioRanking
+          }
+        ]
       },
       {
         path: "/discover/artist",
