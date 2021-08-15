@@ -259,7 +259,7 @@ export const artistCategories = [
 ]
 
 // album-play的样式
-export const albumPlayStyle = {
+export const playStyle = {
   left: 94,
   width: 28,
   bgp: -140,

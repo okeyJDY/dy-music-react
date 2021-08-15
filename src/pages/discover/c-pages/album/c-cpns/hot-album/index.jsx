@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 
-import { albumPlayStyle } from '@/public/local-data';
+import { playStyle } from '@/public/local-data';
 
 import DYThemeHeaderNormal from '@/components/theme-header-normal';
 import DYAlbumCover from '@/components/album-cover';
@@ -22,7 +22,7 @@ export default memo(function DYHotAlbum() {
       <div className="album-list">
         {
           hotAlbumList.map((item, index) => {
-            return <DYAlbumCover key={item.id} info={item} playStyle={albumPlayStyle}
+            return <DYAlbumCover key={item.id} info={item} playStyle={playStyle}
                                  size={130}  width={153} bgp={-845} />
           })
         }
